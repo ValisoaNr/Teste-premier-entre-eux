@@ -7,7 +7,7 @@ Début:
 	LIRE(a);
 	ECRIRE("Entrez la valeur de b :");
 	LIRE(b);
-
+ 	*ils ne sont pas premier entre eux si a divise b*
 	SI(a%b=0)ALORS
 		ECRIRE("a et b ne sont pas premier entre eux");
 		Fin ;*arreter le programme puisque a divise b *
@@ -18,7 +18,8 @@ Début:
 				a←b ;
 				b←r ;
 				r←(a%b);	
-			TANTQUE(r<>0) ; *Desormais, b est le dernier reste non nulle (le pgcd)*
+			TANTQUE(r<>0) ;
+   			*Desormais, b est le dernier reste non nulle (le pgcd)*
       			*premier entre eux si pgcd egale 1*
       			SI(b=1)ALORS
 				ECRIRE("a et b sont premier entre eux\n");
@@ -34,13 +35,13 @@ Fin
 
 int main ()
 {
-	int a , b , r ;
+	int a,b,r;
 	
 	printf("\tTESTER SI DEUX ENTIERS a ET b SONT PREMIER ENTRE EUX\nEntrez la valeur de a :");//Presentation du programme
-	scanf("%d", &a );
+	scanf("%d",&a);
 	printf("Entrez la valeur de b :");
-	scanf("%d", &b );
-	
+	scanf("%d",&b);
+	//ils ne sont pas premier entre eux si a divise b
 	if(a%b==0)
 	{
 		printf("a et b ne sont pas premier entre eux\n");
@@ -55,13 +56,13 @@ int main ()
 				b=r ;
 				r=(a%b);	
 			}
-			while(r!=0) ; //Desormais, b est le dernier reste non nulle (le pgcd)
-	
-			if(b==1)//premier entre eux si pgcd egale 1
+			while(r!=0) ;
+			//Desormais, b est le dernier reste non nulle (le pgcd)
+			//premier entre eux si pgcd egale 1
+			if(b==1)
 			{
 				printf("a et b sont premier entre eux\n");
 			}
-			
 				else
 				{
 					printf("a et b ne sont pas premier entre eux\n");
