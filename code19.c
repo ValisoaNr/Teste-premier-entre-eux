@@ -2,11 +2,11 @@
 
 int main ()
 {
-	int a , b , r ;
-	printf("\tTESTER SI DEUX ENTIERS a ET b SONT PREMIER ENTRE EUX\nEntrez la valeur de a :");//Presentation du programme
-	scanf("%d", &a );
-	printf("Entrez la valeur de b :");
-	scanf("%d", &b );
+	int a,b,r;
+	printf("\tTESTER SI DEUX ENTIERS a ET b SONT PREMIER ENTRE EUX\nEntrez la valeur de a : ");//Presentation du programme
+	scanf("%d",&a);
+	printf("Entrez la valeur de b : ");
+	scanf("%d",&b);
 	//premier entre eux si pgcd egale 1
 	do
 	{
@@ -16,7 +16,7 @@ int main ()
 		r = ( a % b );	
 	}
 	while( r != 0 ) ; //Desormais, b est le dernier reste non nulle (le pgcd)
-	if( b == 1 )
+	if(b==1)
 	{
 		printf("a et b sont premier entre eux\n");
 	}
